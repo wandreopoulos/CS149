@@ -23,6 +23,14 @@ for (i = 0; i < 4; ++i) {
    printf("%d\n", itemsList[i]);
 }
 
+int itemsLis[] = {1,2,3,4};
+
+for (i = 0; i < 400; ++i) {
+   itemsLis[i+1] = itemsLis[i];
+   printf("%d\n", itemsLis[i]);
+}
+
+
 
 }
 
