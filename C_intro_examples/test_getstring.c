@@ -2,7 +2,8 @@
 char * getString()
 {
     char str[] = "Will I be printed?";   
-    return str;
+    char *str2 = "Will I be printedddd?";
+    return str2;
 }
 int main()
 {
