@@ -5,6 +5,8 @@
 int main(int argc, char *argv[]){
     printf("hello world (pid:%d)\n", (int) getpid());
     int rc = fork();
+    //rc = fork();
+    //rc = fork();
     if (rc < 0) { 	// fork failed; exit
         fprintf(stderr, "fork failed\n");
         exit(1);
