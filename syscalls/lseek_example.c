@@ -11,7 +11,7 @@ void func(char arr[], int n)
     int f_read = open("start.txt", O_RDONLY);
 
     // Open the file for WRITE and READ only.
-    int f_write = open("end.txt", O_WRONLY | O_CREAT, 0777);
+    int f_write = open("end.txt", O_WRONLY | O_CREAT | O_TRUNC, 0777);
 
     int count = 0;
     while (read(f_read, arr, 1))

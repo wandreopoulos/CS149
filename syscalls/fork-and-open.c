@@ -17,7 +17,7 @@ int main()
 
     for (c = 'A'; c < 'A' + 5; c++) {
         write(fd, &c, 1);
-        sleep(2);
+        //sleep(2);
     }
 
     close(fd);
