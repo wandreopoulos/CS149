@@ -25,8 +25,8 @@ int main(void)
         if (anon == MAP_FAILED || zero == MAP_FAILED)
                 errx(1, "either mmap");
 
-        strcpy(anon, str1);
-        strcpy(zero, str1);
+        strcpy(anon, str1); //strcpy(dest, src)
+        strcpy(zero, str1); //strcpy(dest, src)
 
         printf("PID %d:\tanonymous %s, zero-backed %s\n", parpid, anon, zero);
         switch ((childpid = fork())) {
@@ -39,8 +39,8 @@ int main(void)
                 sleep(3);
 
                 printf("PID %d:\tanonymous %s, zero-backed %s\n", childpid, anon, zero);
-                strcpy(anon, "FROM CHILD");
-                strcpy(zero, "FROM CHILD");
+                strcpy(anon, "FROM CHILDDD");
+                strcpy(zero, "FROM CHILDDD");
                 sleep(3);
 
                 munmap(anon, 4096);

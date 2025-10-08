@@ -15,13 +15,14 @@ void main()
     printf("End pointer position:%d\n",local);
     local=lseek(fd1,-3,SEEK_END);
     printf("-3 File pointer location:%d\n",local);
-    rbytes=read(fd1,buf,5);
-    buf[5]='\0';
+    //What happens if you read beyond the end of the file?
+    rbytes=read(fd1,buf,10);
+    buf[9]='\0';
     printf("buf1=%s\n",buf);
 
 off_t old_position = lseek(fd1, 0, SEEK_CUR);
 off_t end_position = lseek(fd1, 0, SEEK_END);
-printf("Old pointer position:%ld\n",old_position);
+printf("Old pointer position:%ld End pointer position:%ld\n",old_position, end_position);
 if(old_position >= end_position) {
     /* cursor already has been at the end */
     local=lseek(fd1,0,SEEK_SET);

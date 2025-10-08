@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
 
 char	buf1[] = "abcdefghij";
 char	buf2[] = "ABCDEFGHIJ";
