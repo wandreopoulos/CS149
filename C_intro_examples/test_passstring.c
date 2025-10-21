@@ -14,8 +14,9 @@ void getString(char *str) //char str[]) // char *str)
 
 int main()
 {
-    char s[] = "hello";
-    //char * s = calloc(10, 1);  //malloc and calloc is how you declare dynamic memory
+    //char s[] = "hello"; //this works and is modifiable, it is just seen as as a pointer when you pass it into getString.
+    char *s  = "hello"; //this is a string literal on the Data Segment and it is not intended to be modified.
+    //char * s = calloc(10, 1);  //malloc and calloc is how you declare dynamic memory.
     //getString("Will I be printed?"); //this will not work because what you passing
     //      in is a string literal on the Data Segment, not dynamic memory on the heap
     getString(s);
