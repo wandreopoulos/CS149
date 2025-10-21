@@ -6,7 +6,7 @@
 //will persist after the func returns.
     //return (char *)str;
 
-void getString(char str[]) // char *str) 
+void getString(char *str) //char str[]) // char *str) 
 // you can pass either a [] or a pointer * and it wil be treated like a pointer by C/C++
 {
     str[0] = 'w';
@@ -14,7 +14,8 @@ void getString(char str[]) // char *str)
 
 int main()
 {
-    char * s = calloc(10, 1);  //malloc and calloc is how you declare dynamic memory
+    char s[] = "hello";
+    //char * s = calloc(10, 1);  //malloc and calloc is how you declare dynamic memory
     //getString("Will I be printed?"); //this will not work because what you passing
     //      in is a string literal on the Data Segment, not dynamic memory on the heap
     getString(s);
